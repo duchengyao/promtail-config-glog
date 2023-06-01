@@ -91,8 +91,14 @@ scrape_configs:
             # The regex stage is a parsing stage that parses a log line using a regular expression.
             # Named capture groups in the regex support adding data into the extracted map.
             - regex:
+ 
+                # Name from extracted data to parse. If empty, uses the log message.
+                source: filename
 
                 # The RE2 regular expression. Each capture group must be named.
+                expression: '^(?P<log_dir>.*)\/(?P<log_filename>[^\/]*)$'
+
+            - regex:
                 expression: '^(?P<level>F|E|W|I|D)(?P<yyyy>\S{4})(?P<mm>\S{2})(?P<dd>\S{2}) (?P<time>\S+?) (?P<pid>\S+?) (?P<filename>\S+?):(?P<lineno>\S+?)] (?P<content>.*)$'
 
             # The template stage is a transform stage that lets use manipulate the values
@@ -132,9 +138,12 @@ scrape_configs:
             # will be used for the value of the label. If empty, the value will be
             # inferred to be the same as the key.
             - labels:
+                log_dir:
+                log_filename:
                 level:
                 filename:
                 lineno:
+                timestamp:
 
             # The output stage is an action stage that takes data from the extracted map
             # and changes the log line that will be sent to Loki.
