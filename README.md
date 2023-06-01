@@ -2,7 +2,7 @@
 
 **regex** 
 
-https://regex101.com/r/dFcVGX/1
+[copy && more detail of this regex](https://regex101.com/r/dFcVGX/1)
 
 ![](assets/regex.png)
 
