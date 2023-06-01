@@ -6,6 +6,10 @@ https://regex101.com/r/dFcVGX/1
 
 ![](assets/regex.png)
 
+**match information**
+
+![](assets/match-information.png)
+
 **grafana**
 
 ![](assets/grafana.png)
