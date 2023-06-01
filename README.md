@@ -10,6 +10,22 @@
 
 ![](assets/match-information.png)
 
+**labels**
+
+`
+{
+  "host": "127.0.0.1",
+  "job": "varlogs",
+  "log_dir": "/home/s1nh/workspace/Grafana/test-log",
+  "log_filename": "log.log",
+  "refresh_interval": "1m",
+  "level": "I",
+  "filename": "generate_glog.py",
+  "lineno": "3",
+  "timestamp": "2023-05-31T02:20:09.643827000+08:00"
+}
+`
+
 **grafana**
 
 ![](assets/grafana.png)
